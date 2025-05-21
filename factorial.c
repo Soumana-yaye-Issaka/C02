@@ -1,24 +1,16 @@
-#include <stdio.h>
+#include <stdio.h> // Déclaration de biblothèque standart
 
-int main() {
-    int nombre, i;
-    long long factoriel = 1;  // Utilisation de long long pour éviter le dépassement de capacité
+int main(void) {
+    int nombre; //Déclaration de la variable nombre qui serait à stocker la valeur saisie par l'utilisateur 
+    int factoriel = 1;  // Déclaration de la factoriel et il reçoi la valeur 1 par défaut 
 
-    // Demander à l'utilisateur de saisir un entier
-    printf("Entrez un entier positif : ");
-    scanf("%d", &nombre);
-
-    // Vérifier que le nombre est positif
-    if (nombre < 0) {
-        printf("Le factoriel n'est pas défini pour les nombres négatifs.\n");
-    } else {
-        // Calcul du factoriel
+    scanf("%d", &nombre); // lire la valeur saisie par l'utilusateur 
+            //Utilisation de la boucle pour, pour calculer le factoriel
         for (i = 1; i <= nombre; i++) {
             factoriel *= i;
         }
         // Affichage du résultat
-        printf("Le factoriel de %d est %lld.\n", nombre, factoriel);
-    }
+        printf("Le factoriel de %d est : %d.\n", nombre, factoriel);
 
-    return 0;
+    return 0; // fin du programme 
 }

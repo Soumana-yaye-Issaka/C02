@@ -1,18 +1,17 @@
-#include <stdio.h>
+#include <stdio.h> // Déclaration de bibliothèque standart
 
 int main() {
-    int nombre;
+    int nombre; //Déclaration de variable pour stoker le nombre qui serait verifier 
 
-    // Demander à l'utilisateur de saisir un entier
-    printf("Entrez un entier : ");
-    scanf("%d", &nombre);
+    // 
+    scanf("%d", &nombre); // Lecture du nombre entier saisie par l'utilisateur 
 
     // Vérifier si le nombre est pair ou impair
     if (nombre % 2 == 0) {
-        printf("%d est un nombre pair.\n", nombre);
+        printf("%d est un nombre pair.\n", nombre); // Affiche que le nmbre est pair
     } else {
-        printf("%d est un nombre impair.\n", nombre);
+        printf("%d est un nombre impair.\n", nombre); // Affiche que le nmbre est impair
     }
 
-    return 0;
+    return 0; //  Fin du programme 
 }
