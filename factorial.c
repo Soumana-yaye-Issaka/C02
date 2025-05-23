@@ -1,16 +1,22 @@
-#include <stdio.h> // Déclaration de biblothèque standart
+#include <stdio.h>  //Déclaration de biblothèque standart Pour printf() et scanf()
 
-int main(void) {
-    int nombre; //Déclaration de la variable nombre qui serait à stocker la valeur saisie par l'utilisateur 
-    int factoriel = 1;  // Déclaration de la factoriel et il reçoi la valeur 1 par défaut 
+int main() {  // Début du programme
+    int Nb;  // Variable pour stocker l'entier saisi
+    
+    scanf("%d", &Nb);  // Lecture du nombre
 
-    scanf("%d", &nombre); // lire la valeur saisie par l'utilusateur 
-            //Utilisation de la boucle pour, pour calculer le factoriel
-        for (i = 1; i <= nombre; i++) {
-            factoriel *= i;
-        }
-        // Affichage du résultat
-        printf("Le factoriel de %d est : %d.\n", nombre, factoriel);
+    if (Nb < 0) {  // Vérification si le nombre est négatif
+        printf("Le factoriel n'est pas défini pour les nombres négatifs.\n");
+        return 1;  // Quitte le programme avec un code d'erreur (1)
+    }
 
-    return 0; // fin du programme 
+    long factoriel = 1;  // Initialisation du résultat (type long pour les grands nombres)
+    
+    for (int i = 1; i <= Nb; i++) {  // Boucle de 1 à Nb
+        factoriel *= i;  // Calcul itératif du factoriel (1 × 2 × 3 × ... × Nb)
+    }
+
+    printf("Le factoriel de %d est : %ld\n", Nb, factoriel);  // Affichage
+    return 0;  // Fin du programme
 }
+
